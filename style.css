@@ -117,8 +117,9 @@ select {
 }
 .trending{
     width: 100%;
-    padding: 0 150px 60px;
+    padding: 0 80px 80px;
     margin-top: 400px;
+    justify-content: center;
     background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
 }
 h2 {
@@ -135,8 +136,8 @@ h2 {
     width: 100%;
     max-width: 1400px;
     width: 350px;
-    justify-content: space-between;
-    gap:20px;
+    justify-content: space-around;
+    gap:40px;
 }
 .shows img {
     min-width: 170px;
@@ -148,6 +149,9 @@ h2 {
     border: 2px solid #444;
     transition: transform 0.3s ease;
 }
+#show7{
+    min-width:120px;
+}
 .shows img:hover {
     transform: scale(1.05);
     border-color: #e50914;
@@ -157,7 +161,8 @@ h2 {
 }
 .reasons {
     width: 100%;
-    padding: 60px 150px;
+    padding: 40px 80px;
+    margin-left: 0 80px;
 }
 
 .reasons h2 {
@@ -166,8 +171,8 @@ h2 {
 }
 .reason{
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: center;
     gap: 25px;
 }
 .cards{
@@ -186,16 +191,60 @@ h2 {
     padding:10px;
     align-items: left;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px){
+    #show7 {
+        display: none;
+    }
+}
+
+@media (max-width: 1280px) {
     .intro {
         padding: 20px 40px;
     }
     
     .trending {
-        padding: 0 40px 60px;
+        
+        padding: 70px;
+        margin-top: 100px;
+    }
+    .shows{
+        gap:40px;
+    }
+    .shows img {
+        
+        min-width: 150px;
+        width: 150px;
+        height: 220px;
+        object-fit: cover;
+    }
+    #show6,#show7 {
+        display: none;
+    }
+    .reasons {
+        padding: 40px 80px;
+    }
+    
+    .reason {
+        gap: 20px;
+        flex-wrap: nowrap; /* Keep 4 in one row */
+    }
+    
+    .cards {
+        width: calc(25% - 15px); /* 4 cards in a row */
+        height: 270px;
     }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px){
+    .trending{
+        justify-content: center;
+    }
+    #show6,#show7{
+        display: none;
+
+    }
+
+}
+@media (max-width: 960px) {
     .intro {
         padding: 16px 24px;
     }
@@ -207,6 +256,189 @@ h2 {
     }
     .main .para #topic{
         font-size: 30px;
+    }
+    .trending{
+        width: 100%;
+        padding: 150px 60px;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .shows{
+        margin-left: 38px;
+        margin-right: 38px;
+        min-width: 100px;
+        width: 100px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .shows img {
+        display: flex;
+        justify-content: space-around;
+        min-width: 140px;
+        width: 140px;
+        height: 200px;
+        object-fit: cover;
+    }
+    #show5,#show6,#show7{
+        display: none;
+
+    }
+    .reasons {
+        width: 100%;
+        margin-left: 0 px;
+        padding: 40px 40px;
+    }
+
+    .reasons h2 {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+    .reason{
+        width: 100; 
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+    .cards{
+        background: linear-gradient(rgb(24, 24, 72), rgb(26, 11, 43));
+        border-radius: 10px;
+        height: 200px;
+        width: 48%;
+    }
+    .cards h2{
+        margin-top: 20px;
+        font-size:23px;
+        padding: 10px;
+        text-align: left;
+    }
+    .cards p{
+        padding:10px;
+        text-align: left;
+    }
+}
+@media (max-width: 800px){
+    .intro {
+        padding: 20px 32px;
+    }
+    
+    #text h1 {
+        font-size: 26px;
+    }
+    
+    .right {
+        gap: 10px;
+    }
+    
+    select {
+        height: 33px;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .signin {
+        height: 33px;
+        font-size: 14px;
+        padding: 6px 16px;
+    }
+    
+    .main {
+        padding: 60px 32px 40px;
+        max-width: 90%;
+    }
+    
+    .para h1 {
+        font-size: 36px;
+        margin-bottom: 18px;
+    }
+    
+    .para p {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .btn {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+        align-items: center;
+    }
+    
+    .btn form {
+        width: 100%;
+        max-width: 450px;
+    }
+    
+    .btn input {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 16px;
+        background-color: rgba(22, 22, 22, 0.7);
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        border-radius: 4px;
+    }
+    
+    .started {
+        width: 80%;
+        max-width: 350px;
+        padding: 12px 24px;
+        font-size: 17px;
+    }
+    .trending {
+        padding: 50px 32px;
+        margin-top: 80px;
+        justify-content: center;
+    }
+    
+    .trending h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .shows {
+        gap: 16px;
+        justify-content: flex-start;
+    }
+    
+    .shows img {
+        min-width: 150px;
+        width: 130px;
+        height: 210px;
+    }
+    #show4,#show5, #show6, #show7 {
+        display: none;
+    }
+    .reasons {
+        padding: 40px 32px;
+    }
+    
+    .reasons h2 {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+    
+    .reason {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .cards {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .cards h2 {
+        font-size: 21px;
+        margin-top: 18px;
+        padding: 12px;
+    }
+    
+    .cards p {
+        font-size: 15px;
+        padding: 12px;
+        line-height: 1.4;
     }
 }
 @media (max-width: 600px) {
@@ -297,4 +529,58 @@ h2 {
         align-items: center;
         justify-content: center;
     }
+    .trending {
+        padding: 40px 24px;
+        margin-top: 50px;
+    }
+    
+    .trending h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+        justify-content: center;
+    }
+    
+    .shows {
+        gap: 12px;
+        justify-content: flex-start;
+    }
+    .shows img {
+        min-width: 110px;
+        width: 110px;
+        height: 160px;
+    }
+    #show4,#show5, #show6, #show7 {
+        display: none;
+    }
+    .reasons {
+        padding: 40px 24px;
+    }
+    
+    .reasons h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .reason {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .cards {
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+    }
+    .cards h2 {
+        font-size: 20px;
+        margin-top: 16px;
+        padding: 12px;
+    }
+    
+    .cards p {
+        font-size: 14px;
+        padding: 12px;
+        line-height: 1.5;
+    }
+
 }
