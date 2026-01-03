@@ -541,13 +541,14 @@ h2 {
     }
     
     .shows {
+        padding-left: 0;
         gap: 12px;
         justify-content: flex-start;
     }
     .shows img {
-        min-width: 110px;
-        width: 110px;
-        height: 160px;
+        min-width: 90px;
+        width: 90px;
+        height: 150px;
     }
     #show4,#show5, #show6, #show7 {
         display: none;
