@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix India - Watch Sows Online, Watch Movies Online</title>
-    <link rel="stylesheet" href = "./style.css">
-    <link rel="icon" href="neticon.ico" type="image/ico">
+    <title>Netflix India - Watch Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="neticon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
-    <div class="intro">
-        <div id="text"><h1>NETFLIX</h1>
+    <header class="intro">
+        <div id="text">
+            <h1>NETFLIX</h1>
         </div>
 
-        <div class="right">
+        <nav class="right">
             <form>
-                <select name="language">
+                <label for="language" class="visually-hidden">Select Language</label>
+                <select name="language" id="language">
                     <option value="English">English</option>
                     <option value="Arabic">Arabic</option>
                     <option value="Hindi">Hindi</option>
@@ -25,61 +25,127 @@
                     <option value="Spanish">Spanish</option>
                     <option value="French">French</option>
                 </select>
-            
             </form>
-            <button class="signin"><a href="./signin.html">Sign in</a></button>
-        </div>
-    </div>
-    <div class="main">
+            <a href="./signin.html" class="signin">Sign in</a>
+        </nav>
+    </header>
+
+    <main class="main">
         <div class="para">
-            <h1>Unlimited movies, shows, and more</h1>
-            <p><b>Starts at ₹149. Cancel at any time.</b></p>
-            <br>
+            <h2>Unlimited movies, shows, and more</h2>
+            <p><strong>Starts at ₹149. Cancel at any time.</strong></p>
             <p>Ready to watch? Enter your email to create or restart your membership.</p>
         </div>
         <div class="btn">
-            <form>
-                <label for="name"></label>
-                <input type="text" id="name" name="name" placeholder="Email address" required>
-
+            <form action="#" method="post">
+                <label for="email" class="visually-hidden">Email address</label>
+                <input type="email" id="email" name="email" placeholder="Email address" required>
+                <button type="submit" class="started">Get Started ›</button>
             </form>
-            <button type="submit" class="started">Get Started></button>
         </div>
-    </div>
-    <div class="trending">
+    </main>
+
+    <section class="trending">
         <h2>Trending Now</h2>
         <div class="shows">
-            <img id="show1" src="stranger.jpg" alt="Stranger Things">
-            <img id="show2" src="kapil.jpg" alt="The Great Indian Kapil Show">
-            <img id="show3" src="jolly.jpg" alt="Jolly LLB 3">
-            <img id="show4" src="gf.jpg" alt="The Girlfriend">
-            <img id="show5" src="papa.jpg" alt="Single Papa">
-            <img id="show6" src="flood.jpg" alt="The Great Flood">
-            <img id="show7" src="dude.jpg" alt="Dude">
+            <img src="stranger.jpg" alt="Stranger Things">
+            <img src="kapil.jpg" alt="The Great Indian Kapil Show">
+            <img src="jolly.jpg" alt="Jolly LLB 3">
+            <img src="gf.jpg" alt="The Girlfriend">
+            <img src="papa.jpg" alt="Single Papa">
+            <img src="flood.jpg" alt="The Great Flood">
+            <img src="dude.jpg" alt="Dude">
         </div> 
-    </div>
-    <div class="reasons">
-        <h2>More reasons to Join</h2>
-        <div class="reason">
-            
-            <div class="cards">
-                <h2>Enjoy on your TV</h2>
-                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
-            </div>
-            <div class="cards">
-                <h2>Download your shows to watch offline</h2>
-                <p>Save your favourites easily and always have something to watch.</p>
-            </div>
-            <div class="cards">
-                <h2>Watch everywhere</h2>
-                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
-            </div>
-            <div class="cards">
-                <h2>Create profiles for kids</h2>
-                <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+    </section>
 
-            </div>
+    <section class="reasons">
+        <h2>More reasons to join</h2>
+        <div class="reason">
+            <article class="cards">
+                <h3>Enjoy on your TV</h3>
+                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </article>
+            <article class="cards">
+                <h3>Download your shows to watch offline</h3>
+                <p>Save your favourites easily and always have something to watch.</p>
+            </article>
+            <article class="cards">
+                <h3>Watch everywhere</h3>
+                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </article>
+            <article class="cards">
+                <h3>Create profiles for kids</h3>
+                <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+            </article>
         </div>
+    </section>
+    <section class="questions">
+        <h2>Frequently asked questions?</h2>
+        <p class="question">What is Netflix?</p>
+        <p class="question">How much does Netflix cost?</p>
+        <p class="question">Where can I watch?</p>
+        <p class="question">How do I cancel?</p>
+        <p class="question">What can I watch on Netflix</p>
+        <p class="question">Is Netflix good for kids?</p>
+
+    </section>
+    <footer class="footer">
+    <div class="footer-content">
+        <section class="footer-email">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <form class="footer-form" action="#" method="post">
+                <label for="footer-email" class="visually-hidden">Email address</label>
+                <input type="email" id="footer-email" name="email" placeholder="Email address" required>
+                <button type="submit" class="footer-button">Get Started ›</button>
+            </form>
+        </section>
+
+        <section class="footer-contact">
+            <p>Questions? Call <a href="tel:000-800-919-1743">000-800-919-1743</a></p>
+        </section>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <div class="footer-column">
+                <a href="#">FAQ</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Privacy</a>
+                <a href="#">Speed Test</a>
+            </div>
+            <div class="footer-column">
+                <a href="#">Help Centre</a>
+                <a href="#">Jobs</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Legal Notices</a>
+            </div>
+            <div class="footer-column">
+                <a href="#">Account</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Only on Netflix</a>
+            </div>
+            <div class="footer-column">
+                <a href="#">Media Centre</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </nav>
+
+        <section class="footer-language">
+            <label for="footer-language" class="visually-hidden">Select Language</label>
+            <select name="language" id="footer-language">
+                <option value="English">English</option>
+                <option value="Hindi">हिन्दी</option>
+            </select>
+        </section>
+
+        <section class="footer-country">
+            <p>Netflix India</p>
+        </section>
+
+        <aside class="footer-recaptcha">
+            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a></p>
+        </aside>
     </div>
+</footer>
 </body>
 </html>
